@@ -12,6 +12,11 @@ TagManager:
   - Key
   - Ball
   - Reset
+  - Boss
+  - Fire
+  - WitherSkull
+  - MovingPlatform
+  - Interactable
   layers:
   - Default
   - TransparentFX

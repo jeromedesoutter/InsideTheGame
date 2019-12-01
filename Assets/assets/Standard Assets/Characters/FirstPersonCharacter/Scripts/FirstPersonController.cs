@@ -45,6 +45,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
 
         public int bounce;
+        private MovingPlatform platform = null;
 
         // Use this for initialization
         private void Start()
@@ -87,6 +88,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            if (platform != null)
+            {
+                m_CharacterController.enabled = false;
+                transform.position = transform.position + platform.GetTranslation();
+                m_CharacterController.enabled = true;
+            }
         }
 
 
@@ -257,6 +265,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
             Rigidbody body = hit.collider.attachedRigidbody;
+            if (hit.collider.CompareTag("MovingPlatform"))
+            {
+                platform = hit.collider.gameObject.GetComponent<MovingPlatform>();
+            }
+            else
+            {
+                platform = null;
+            }
             //dont move the rigidbody if the character is on top of it
             if (m_CollisionFlags == CollisionFlags.Below)
             {

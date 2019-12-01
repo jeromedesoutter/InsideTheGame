@@ -710,11 +710,10 @@ MonoBehaviour:
   - {fileID: 4801598191730841511}
   - {fileID: 4801598193543135712}
   - {fileID: 4801598192331083540}
-  - {fileID: 0}
   goldKey: {fileID: 21300000, guid: f7bd3c5e58bf84d4390d3d360e2cb127, type: 3}
   silverKey: {fileID: 21300000, guid: 528e5c9f5b04cdb47b18e2750f76ad79, type: 3}
   objective: {fileID: 4801598192738216816}
-  chronoScript: {fileID: 0}
+  chronoScript: {fileID: 4801598192833672900}
   inventoryCurrentObject: {fileID: 4801598191965601955}
 --- !u!1 &4801598192249464663
 GameObject:
@@ -1011,7 +1010,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tuez tous les ennemis
+  m_Text: Go to the next room
 --- !u!1 &4801598192833672904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1088,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Temps restant     00:30
+  m_Text: Temps restant     00:00
 --- !u!114 &4801598192833672900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,6 +1105,7 @@ MonoBehaviour:
   time:
     minutes: 0
     seconds: 0
+  timeOver: 0
 --- !u!1 &4801598192840939995
 GameObject:
   m_ObjectHideFlags: 0

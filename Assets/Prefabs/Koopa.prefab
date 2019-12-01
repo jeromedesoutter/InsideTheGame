@@ -47,7 +47,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325436908}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -124,7 +124,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684070121}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 6199387756837696058}
   m_Layer: 2
   m_Name: Koopa
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 6199387756837696059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 6199387757666848414}
   m_Father: {fileID: 0}
@@ -249,11 +249,11 @@ MonoBehaviour:
   player: {fileID: 0}
   raycastPoint: {fileID: 0}
   life:
-    currentLife: 100
-    maxLife: 100
+    current: 15
+    max: 15
   delayBeforeDisappearingWhenDead: 3
   debug:
-    showRay: 1
+    showRay: 0
     showDebugSphere: 0
     scaleFactor: 1
     debugSphere: {fileID: 1684070121}
@@ -262,12 +262,16 @@ MonoBehaviour:
     sounds:
     - name: see_player
       source: {fileID: 408492608}
+  color: {r: 1, g: 0, b: 0, a: 1}
+  duration: 0.7
   steering:
-    distanceMaxToPlayer: 3
-    speed: 0.01
+    distanceMaxToPlayer: 15
+    speed: 0.08
     wander:
       wanderRadius: 1
       wanderTimer: 3
+  attack: 10
+  timeBetweenAttack: 1.5
 --- !u!195 &6199387756219538032
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -393,10 +397,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6199387756837696058}
     m_Modifications:
-    - target: {fileID: 100038, guid: 6b71dadf5718f0e49b9df3ab148896f7, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6b71dadf5718f0e49b9df3ab148896f7, type: 3}
       propertyPath: m_Name
       value: koopa
@@ -478,6 +478,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100036, guid: 6b71dadf5718f0e49b9df3ab148896f7, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 6b71dadf5718f0e49b9df3ab148896f7, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
