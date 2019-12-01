@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Projectil")
         {
             Projectil s = collision.gameObject.GetComponent<Projectil>();
@@ -57,6 +57,9 @@ public class Player : MonoBehaviour
             {
                 TakeDamage(skull.hitDamage);
             }
+        }
+        else if(collision.gameObject.GetComponent<BowserBodyPart>() != null){
+            TakeDamage(collision.gameObject.GetComponent<BowserBodyPart>().GetDamage());
         }
     }
 

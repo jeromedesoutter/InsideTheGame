@@ -46,6 +46,7 @@ public class BowserBodyPart : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("test");
         if (collision.gameObject.CompareTag("Untagged"))
         {
             boss.TakeDamage(3f);
