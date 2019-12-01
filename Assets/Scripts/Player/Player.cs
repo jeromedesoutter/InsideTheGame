@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        gController.setHitFeedback();
         if (shield.current == 0)
         {
             life.current -= damage;

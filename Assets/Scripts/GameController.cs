@@ -168,4 +168,9 @@ public class GameController : MonoBehaviour
             interfaceScript.chronoScript.StopTimer();
         }
     }
+
+    public void setHitFeedback()
+    {
+        interfaceScript.PlayerHit();
+    }
 }

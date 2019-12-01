@@ -21,10 +21,33 @@ public class Interface : MonoBehaviour
 
     public Image inventoryCurrentObject;
 
+    public Image hitPanel;
+    public bool hitFlash;
+    private bool resetFlash;
+    private float TimeSinceBeginFeedback;
+    public float duration = 0.3f;
+
     public void Start()
     {
         lifeBarWidth = lifebar.GetComponent<RectTransform>().rect.width;
         shieldBarWidth = shieldBar.GetComponent<RectTransform>().rect.width;
+        TimeSinceBeginFeedback = 0;
+        resetFlash = false;
+        hitFlash = false;
+    }
+
+    private void Update()
+    {
+        TimeSinceBeginFeedback += Time.deltaTime;
+        if (resetFlash)
+        {
+            resetFlash = false;
+            TimeSinceBeginFeedback = 0;
+        }
+        if (hitFlash)
+        {
+            UpdateFlash();
+        }
     }
 
     public void UpdateLife(float percentageLife, double valueLife)
@@ -68,5 +91,36 @@ public class Interface : MonoBehaviour
     public void HideInventory()
     {
         inventoryCurrentObject.gameObject.SetActive(false);
+    }
+
+    public void PlayerHit()
+    {
+        if (hitPanel != null)
+        {
+            hitFlash = true;
+            resetFlash = true;
+        }
+    }
+
+    void UpdateFlash()
+    {
+        Debug.Log("in flash " + TimeSinceBeginFeedback);
+        if (TimeSinceBeginFeedback >= duration) { hitFlash = false; return; }
+
+        Color oldColor = new Color(1, 0, 0, 0);
+        Color newColor = new Color(1, 0, 0, 0.2f);
+        
+            
+            if (TimeSinceBeginFeedback < duration / 5)
+            {
+                float lerp = 5 * TimeSinceBeginFeedback / duration;
+                hitPanel.color = Color.Lerp(oldColor, newColor, lerp);
+            }
+            else
+            {
+                float lerp = 5 * (TimeSinceBeginFeedback - duration / 5) / (duration * 4);
+                hitPanel.color = Color.Lerp(newColor, oldColor, lerp);
+            }
+
     }
 }
