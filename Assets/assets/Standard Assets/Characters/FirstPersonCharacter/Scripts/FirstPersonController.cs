@@ -273,6 +273,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 platform = null;
             }
+            if (hit.collider.GetComponent<BowserBodyPart>() != null)
+            {
+                GetComponent<Player>().TakeDamage(hit.collider.GetComponent<BowserBodyPart>().GetDamage());
+            }
+
             //dont move the rigidbody if the character is on top of it
             if (m_CollisionFlags == CollisionFlags.Below)
             {

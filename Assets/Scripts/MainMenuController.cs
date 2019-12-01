@@ -47,14 +47,12 @@ public class MainMenuController : MonoBehaviour
 
     public void ContinueGame()
     {
-        //SceneManager.LoadScene(levelReachedInPreviousGame);
-        Debug.Log("Continue Game");
+        SceneManager.LoadScene(levelReachedInPreviousGame);
     }
 
     public void NewGame()
     {
-        SceneManager.LoadScene("Minecraft");
-        Debug.Log("New Game");
+        SceneManager.LoadScene("Scenes/Minecraft");
     }
 
     public void Quitter()

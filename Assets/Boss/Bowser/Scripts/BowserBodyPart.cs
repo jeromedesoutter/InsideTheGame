@@ -20,12 +20,24 @@ public class BowserBodyPart : MonoBehaviour
     public BowserBodyPartEnum bodyPart;
     public BowserBoss boss;
 
+    float TimeSinceLastDamage = 0;
+    float DelayBetweenDamages = .5f;
+
     private void Start()
     {
-        boss = GetComponentInParent<BowserBoss>();        
+        boss = GetComponentInParent<BowserBoss>();
+        TimeSinceLastDamage = DelayBetweenDamages;
     }
+    private void Update()
+    {
+        TimeSinceLastDamage += Time.deltaTime;
+    }
+
     public int GetDamage()
     {
+        if (TimeSinceLastDamage < DelayBetweenDamages) { return 0; }
+
+        TimeSinceLastDamage = 0;
         switch (bodyPart)
         {
             case BowserBodyPartEnum.FOREARM:
@@ -46,11 +58,9 @@ public class BowserBodyPart : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("test");
         if (collision.gameObject.CompareTag("Untagged"))
         {
             boss.TakeDamage(3f);
-            //Debug.Log("Hit");
         }
     }
 }

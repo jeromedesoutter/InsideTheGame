@@ -161,11 +161,19 @@ public class RoomManager : MonoBehaviour
         gcontroller.setInterfaceObjective("Go to the next room");
         gcontroller.ActiveTimer(false);
         unlockDoors = true;
+        SaveState();
         lvManager.ChangeCurrentRoomState(LevelManager.roomState.finished);
         if (roomType != roomTypeEnum.boss)
         {
             lvManager.addKey();
         }
+    }
+    void SaveState(bool win=true)
+    {
+        GameData data = SaveSystem.LoadScores();
+        if (win) data.stats.roomsWon += 1;
+        else data.stats.roomsLost += 1;
+        SaveSystem.SaveScores(data);
     }
 
     private void SpawnKey()

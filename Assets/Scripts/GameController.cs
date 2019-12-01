@@ -54,9 +54,17 @@ public class GameController : MonoBehaviour
     {
         menuGameOver.SetActive(true);
         UIFocus(true);
+        SaveState(false);
         EventSystem.current.SetSelectedGameObject(menuGameOver);
     }
 
+    void SaveState(bool win = true)
+    {
+        GameData data = SaveSystem.LoadScores();
+        if (win) data.stats.roomsWon += 1;
+        else data.stats.roomsLost += 1;
+        SaveSystem.SaveScores(data);
+    }
     public void ResetGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -109,7 +117,7 @@ public class GameController : MonoBehaviour
     }
     public void Quit()
     {
-        Debug.Log("Return to Main Menu");
+        SceneManager.LoadScene(0);
     }
 
     public void WinAKey()
