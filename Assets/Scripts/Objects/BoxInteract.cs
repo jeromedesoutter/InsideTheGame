@@ -15,7 +15,7 @@ public class BoxInteract : Interact
         {
             if (player != null)
             {
-                // TODO call function in Player that get put new items in inventory
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().gController.AddBonusToInventory(bonus);
                 Debug.Log("New item in inventory : " + bonus.bonus + " x" + bonus.quantity);
             }
         }

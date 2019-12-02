@@ -19,6 +19,9 @@ public class BombDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.GetComponent<IEnemy>().life.current -= 50;
+        }
     }
 }

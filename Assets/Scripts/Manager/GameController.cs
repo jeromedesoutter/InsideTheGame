@@ -85,6 +85,17 @@ public class GameController : MonoBehaviour
             Quit();
         }
 
+
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            PreviousObject();
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            NextObject();
+        }
+
         if (delayBeforeTimeDamage > 0)
         {
             delayBeforeTimeDamage -= Time.deltaTime;
@@ -98,8 +109,17 @@ public class GameController : MonoBehaviour
 
         interfaceScript.UpdateLife((float)(player.life.current / player.life.max), Mathf.Min((float)player.life.current, (float)player.life.max));
         interfaceScript.UpdateShield((float)(player.shield.current / player.shield.max));
+
     }
 
+    public void AddBonusToInventory(Bonus bonus)
+    {
+        inventory.WinItem(bonus);
+        if(inventory.Current().name == bonus.bonus)
+        {
+            interfaceScript.SetCurrentObject(inventory.Current());
+        }
+    }
 
     void Pause()
     {
@@ -143,6 +163,17 @@ public class GameController : MonoBehaviour
             player.GetComponent<FirstPersonController>().mouseLookEnabled = true;
             EventSystem.current = es;
         }
+    }
+
+    public Item Use()
+    {
+        if (inventory.UseItem())
+        {
+            Item i = inventory.Current();
+            interfaceScript.SetCurrentObject(i);
+            return i;
+        }
+        return null;
     }
 
     public void PreviousObject()

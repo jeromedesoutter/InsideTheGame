@@ -25,7 +25,6 @@ public class Interact : MonoBehaviour
     
     protected void OnTriggerStay(Collider collider)
     {
-
         if (collider.CompareTag("Player"))
         {
             m_IsAvailable = true;

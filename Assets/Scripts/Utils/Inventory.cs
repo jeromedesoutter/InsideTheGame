@@ -25,6 +25,17 @@ public class Inventory
         }
     }
 
+    public void WinItem(Bonus bonus)
+    {
+        foreach(Item i in items)
+        {
+            if(bonus.bonus == i.name)
+            {
+                i.quantity += bonus.quantity;
+            }
+        }
+    }
+
     public Item At(int index)
     {
         if (items.Count < index || index < 0)
@@ -32,7 +43,22 @@ public class Inventory
         else
             return items[index];
     }
-
+    public bool UseItem()
+    {
+        foreach(Item i in items)
+        {
+            if(i.name == Current().name)
+            {
+                if (i.quantity == 0) return false;
+                else
+                {
+                    i.quantity -= 1;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
     public int Length()
     {
         return items.Count;
