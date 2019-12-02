@@ -28,11 +28,12 @@ public class BombScript : MonoBehaviour
     void Start()
     {
         renderers = GetComponentsInChildren<Renderer>();
+
         timeSinceInstanciation = 0;
         exploded = false;
 
         explosionScript = GetComponentInChildren<BombDamage>();
-
+        //explosionScript.enabled = false;
         count = 4;
         duration = 1;
 
@@ -60,10 +61,13 @@ public class BombScript : MonoBehaviour
     void Explode()
     {
         exploded = true;
+
         particles = Instantiate(explosionEffect, transform.position, transform.rotation);
         audioMinuterie.Stop();
         audioBoum.Play();
+        
         explosionScript.enabled = true;
+        explosionScript.explode();
         Invoke("DestroyEffect", 2);
         foreach (Renderer r in renderers)
         {

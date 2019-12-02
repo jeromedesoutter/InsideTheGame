@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5878358264081679309}
   m_Layer: 0
   m_Name: TNT
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e74f65eaa58a86f41b743871a71fe9ac, type: 3}
+  m_audioClip: {fileID: 8300000, guid: df2c6ebecbeaaeb47aaf3ea7b503b277, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -270,7 +270,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 100
+  m_Radius: 150
   m_Center: {x: 0, y: 23.5, z: -1}
 --- !u!114 &992479397791586480
 MonoBehaviour:

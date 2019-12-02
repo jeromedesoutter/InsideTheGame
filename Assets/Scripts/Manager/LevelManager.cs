@@ -36,6 +36,7 @@ public class LevelManager : MonoBehaviour
         currentRoom = rooms[0];
         currentRoomState = roomState.finished;
         keyNomber = 0;
+       
     }
 
 

@@ -6,6 +6,7 @@ public class KeyScript : MonoBehaviour
 {
 
     private RoomManager room;
+
     void Start()
     {
         room = GetComponentInParent<RoomManager>();

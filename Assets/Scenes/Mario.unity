@@ -1536,6 +1536,8 @@ MonoBehaviour:
   Objectif: Get the key
   myTimer: 0
   unlockDoors: 0
+  soundsManager:
+    sounds: []
 --- !u!1 &72165448
 GameObject:
   m_ObjectHideFlags: 0
@@ -8738,6 +8740,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Volume
+      value: 0.55
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_RunstepLenghten
       value: 0.1
@@ -8770,13 +8784,13 @@ PrefabInstance:
       propertyPath: m_GravityMultiplier
       value: 2.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_Volume
-      value: 0.55
+    - target: {fileID: 925825228, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: gController
+      value: 
+      objectReference: {fileID: 2095064197}
+    - target: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_SlopeLimit
@@ -8794,18 +8808,6 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.45
       objectReference: {fileID: 0}
-    - target: {fileID: 5400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 925825228, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: gController
-      value: 
-      objectReference: {fileID: 2095064197}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!1 &524534178
@@ -10355,6 +10357,8 @@ MonoBehaviour:
   Objectif: Kill all the enemies
   myTimer: 0
   unlockDoors: 0
+  soundsManager:
+    sounds: []
 --- !u!4 &654962650
 Transform:
   m_ObjectHideFlags: 0
@@ -14859,6 +14863,8 @@ MonoBehaviour:
   Objectif: Go to the next level
   myTimer: 0
   unlockDoors: 0
+  soundsManager:
+    sounds: []
 --- !u!1001 &883036456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15554,6 +15560,8 @@ MonoBehaviour:
   Objectif: Go to the next room
   myTimer: 0
   unlockDoors: 0
+  soundsManager:
+    sounds: []
 --- !u!43 &919748163
 Mesh:
   m_ObjectHideFlags: 0
@@ -18113,6 +18121,8 @@ MonoBehaviour:
   Objectif: Get the key
   myTimer: 0
   unlockDoors: 0
+  soundsManager:
+    sounds: []
 --- !u!1 &1074618596
 GameObject:
   m_ObjectHideFlags: 0
@@ -18168,6 +18178,8 @@ MonoBehaviour:
   Objectif: Take the bonus
   myTimer: 0
   unlockDoors: 0
+  soundsManager:
+    sounds: []
 --- !u!1001 &1089319040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19564,6 +19576,8 @@ MonoBehaviour:
   Objectif: Kill the boss
   myTimer: 0
   unlockDoors: 0
+  soundsManager:
+    sounds: []
 --- !u!1 &1205557397
 GameObject:
   m_ObjectHideFlags: 0
@@ -20488,6 +20502,43 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
+        type: 3}
+      propertyPath: menuPause
+      value: 
+      objectReference: {fileID: 1674752854}
+    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
+        type: 3}
+      propertyPath: menuGameOver
+      value: 
+      objectReference: {fileID: 151885609}
+    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
+        type: 3}
+      propertyPath: gameInterface
+      value: 
+      objectReference: {fileID: 1951743188}
+    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 925825229}
+    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
+        type: 3}
+      propertyPath: itemsAtBeginning.Array.data[0].name
+      value: BobOmb
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
+        type: 3}
+      propertyPath: itemsAtBeginning.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0446d7611817a94cab74eec3d357b9f,
+        type: 3}
+    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
+        type: 3}
+      propertyPath: itemsAtBeginning.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 8231620105093192803, guid: a9d660ebcf36056429524c0c2f217fa3,
+        type: 3}
     - target: {fileID: 8856186699541601243, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20543,43 +20594,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
-        type: 3}
-      propertyPath: menuPause
-      value: 
-      objectReference: {fileID: 1674752854}
-    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
-        type: 3}
-      propertyPath: menuGameOver
-      value: 
-      objectReference: {fileID: 151885609}
-    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
-        type: 3}
-      propertyPath: gameInterface
-      value: 
-      objectReference: {fileID: 1951743188}
-    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 925825229}
-    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
-        type: 3}
-      propertyPath: itemsAtBeginning.Array.data[0].name
-      value: BobOmb
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
-        type: 3}
-      propertyPath: itemsAtBeginning.Array.data[0].sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f0446d7611817a94cab74eec3d357b9f,
-        type: 3}
-    - target: {fileID: 8856186699541601244, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46,
-        type: 3}
-      propertyPath: itemsAtBeginning.Array.data[0].prefab
-      value: 
-      objectReference: {fileID: 8231620105093192803, guid: a9d660ebcf36056429524c0c2f217fa3,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d39dd3e8efcc58c4fa3f64c6a7f42f46, type: 3}
 --- !u!43 &1270092950
@@ -29894,6 +29908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3541f2f0a84deee4bbc6cf0b1cf06fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevelindex: 0
   levelToLoad: Scenes/MainMenu
 --- !u!65 &1820110341
 BoxCollider:
@@ -30326,6 +30341,8 @@ MonoBehaviour:
   Objectif: Kill all the enemies
   myTimer: 0
   unlockDoors: 0
+  soundsManager:
+    sounds: []
 --- !u!43 &1851702600
 Mesh:
   m_ObjectHideFlags: 0
@@ -32671,6 +32688,8 @@ MonoBehaviour:
   Objectif: Take the bonus
   myTimer: 0
   unlockDoors: 0
+  soundsManager:
+    sounds: []
 --- !u!1 &2001802212
 GameObject:
   m_ObjectHideFlags: 0
@@ -33351,6 +33370,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281692297418231581, guid: 9beb0f2df8ca2484793b0cddbbef9abd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2095064197}
+    - target: {fileID: 8281692297418231581, guid: 9beb0f2df8ca2484793b0cddbbef9abd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281692297782744929, guid: 9beb0f2df8ca2484793b0cddbbef9abd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2095064197}
+    - target: {fileID: 8281692297782744929, guid: 9beb0f2df8ca2484793b0cddbbef9abd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinueGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9beb0f2df8ca2484793b0cddbbef9abd, type: 3}
@@ -34603,6 +34642,8 @@ MonoBehaviour:
   Objectif: Kill all the enemies
   myTimer: 0
   unlockDoors: 0
+  soundsManager:
+    sounds: []
 --- !u!4 &2128586257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7656693498725624221, guid: 4dfa8f6834ec71c46a4276439faf83ae,

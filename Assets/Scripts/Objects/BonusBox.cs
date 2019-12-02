@@ -10,6 +10,7 @@ public struct Bonus
 
 public class BonusBox : MonoBehaviour
 {
+    public AudioManager soundsManager;
     class BonusFactory
     {
         public static Bonus Create()
@@ -27,7 +28,7 @@ public class BonusBox : MonoBehaviour
                     break;
                 default:
                     b.bonus = "bomb";
-                    b.quantity = Random.Range(5, 10);
+                    b.quantity = Random.Range(2, 6);
                     break;
             }
             return b;
@@ -49,6 +50,18 @@ public class BonusBox : MonoBehaviour
         if (triggerSphere != null && triggerSphere.IsAvailable() && Input.GetKeyDown(keyCode))
         {
             triggerSphere.GiveBonusToPlayer(bonus);
+            
+            if (bonus.quantity != 0)
+            {
+                if (soundsManager != null)
+                {
+                    soundsManager.PlaySound("win");
+                }
+                GameData data = SaveSystem.LoadScores();
+                data.stats.objectsPickedUp += 1;
+                SaveSystem.SaveScores(data);
+            }
+
             bonus.quantity = 0;
         }
     }

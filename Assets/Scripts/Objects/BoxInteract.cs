@@ -15,7 +15,7 @@ public class BoxInteract : Interact
         {
             if (player != null)
             {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().gController.AddBonusToInventory(bonus);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().gController.AddBonusToInventory(bonus);      
                 Debug.Log("New item in inventory : " + bonus.bonus + " x" + bonus.quantity);
             }
         }

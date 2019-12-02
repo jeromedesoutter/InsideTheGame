@@ -119,17 +119,26 @@ public abstract class IEnemy : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void TakeDamage(int damage)
+    {
+        HitFeedback = true;
+        TimeSinceBeginFeedback = 0;
+
+        soundsManager.PlaySound("hurt");
+
+        life.current -= damage;
+    }
+
     protected virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ball")
         {
-            HitFeedback = true;
-            TimeSinceBeginFeedback = 0;
-
-            soundsManager.PlaySound("hurt");
 
             Ball s = collision.gameObject.GetComponent<Ball>();
-            life.current -= s.damage;
+            if (s != null)
+            {
+                TakeDamage(s.damage);
+            }
         }
     }
 

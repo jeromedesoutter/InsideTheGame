@@ -9,12 +9,14 @@ public class Item
     public Sprite sprite;
     public GameObject prefab;
     public int quantity = 0;
+    
 };
 
 public class Inventory
 {
     List<Item> items;
     int currentIndex = -1;
+    private GameController gControler;
 
     public Inventory(Item[] listItems)
     {
@@ -25,15 +27,17 @@ public class Inventory
         }
     }
 
-    public void WinItem(Bonus bonus)
+    public int WinItem(Bonus bonus)
     {
         foreach(Item i in items)
         {
             if(bonus.bonus == i.name)
             {
                 i.quantity += bonus.quantity;
+                return i.quantity;
             }
         }
+        return 0;
     }
 
     public Item At(int index)

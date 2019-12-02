@@ -22,6 +22,8 @@ public class RoomManager : MonoBehaviour
 
     private GameController gcontroller = null;
 
+    public AudioManager soundsManager;
+
     //set an Id to each roomManager by the levelManager
     public void setId(int i)
     {
@@ -159,6 +161,10 @@ public class RoomManager : MonoBehaviour
     public void FinishRoom()
     {
         gcontroller.setInterfaceObjective("Go to the next room");
+        if (soundsManager != null)
+        {
+            soundsManager.PlaySound("win");
+        }
         gcontroller.ActiveTimer(false);
         unlockDoors = true;
         lvManager.ChangeCurrentRoomState(LevelManager.roomState.finished);

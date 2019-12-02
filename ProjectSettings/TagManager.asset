@@ -17,6 +17,7 @@ TagManager:
   - WitherSkull
   - MovingPlatform
   - Interactable
+  - Bomb
   layers:
   - Default
   - TransparentFX

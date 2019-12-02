@@ -37,7 +37,8 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        ResetTimer();
+        ResetTimer(0,0);
+        timerActive = false;
     }
 
     void FixedUpdate()

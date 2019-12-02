@@ -59,6 +59,10 @@ public class Player : MonoBehaviour
             life.current -= (damage - shield.current);
             shield.current = 0;
         }
+        if (life.current < 0)
+        {
+            life.current = 0;
+        }
         CheckDeath();
     }
 

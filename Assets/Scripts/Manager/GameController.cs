@@ -47,7 +47,9 @@ public class GameController : MonoBehaviour
             interfaceScript.HideInventory();
         }
         interfaceScript.UpdateKeys(numberOfKeysWon);
+        initIemCount();
         UIFocus(false);
+        ActiveTimer(false);
     }
 
     public void GameOver()
@@ -114,11 +116,23 @@ public class GameController : MonoBehaviour
 
     public void AddBonusToInventory(Bonus bonus)
     {
-        inventory.WinItem(bonus);
+        int number = inventory.WinItem(bonus);
         if(inventory.Current().name == bonus.bonus)
         {
             interfaceScript.SetCurrentObject(inventory.Current());
+            setItemCount(number);
         }
+    }
+
+    public void setItemCount(int count)
+    {
+        interfaceScript.ChangeItemCount(count);
+    }
+
+    public void initIemCount()
+    {
+        Item item = inventory.Current();
+        setItemCount(item.quantity);
     }
 
     void Pause()
@@ -171,6 +185,7 @@ public class GameController : MonoBehaviour
         {
             Item i = inventory.Current();
             interfaceScript.SetCurrentObject(i);
+            setItemCount(i.quantity);
             return i;
         }
         return null;
@@ -180,11 +195,13 @@ public class GameController : MonoBehaviour
     {
         Item item = inventory.Previous();
         interfaceScript.SetCurrentObject(item);
+        setItemCount(item.quantity);
     }
     public void NextObject()
     {
         Item item = inventory.Next();
         interfaceScript.SetCurrentObject(item);
+        setItemCount(item.quantity);
     }
 
     public void setInterfaceTimer(int second, int minute)

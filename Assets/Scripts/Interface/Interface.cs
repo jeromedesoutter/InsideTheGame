@@ -19,6 +19,8 @@ public class Interface : MonoBehaviour
     public Text objective;
     public Timer chronoScript;
 
+    public Text itemCount;
+
     public Image inventoryCurrentObject;
 
     public Image hitPanel;
@@ -118,5 +120,10 @@ public class Interface : MonoBehaviour
             hitFlash = true;
             resetFlash = true;
         }
+    }
+
+    public void ChangeItemCount(int count)
+    {
+        itemCount.text = "R (x" + count + ")";
     }
 }
