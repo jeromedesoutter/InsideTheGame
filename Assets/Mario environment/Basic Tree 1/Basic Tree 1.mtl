@@ -1,0 +1,41 @@
+# Blender MTL File: 'None'
+# Material Count: 3
+
+newmtl Material1790
+Ns 96.078431
+Ka 0.784314 0.784314 0.784314
+Kd 0.972549 0.972549 0.972549
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.290323
+illum 2
+map_Kd Material1790.png
+map_Ka Material1790.png
+map_d Material1790.png
+
+newmtl Material1807
+Ns 96.078431
+Ka 0.784314 0.784314 0.784314
+Kd 0.972549 0.972549 0.972549
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Material1807.png
+map_Ka Material1807.png
+map_d Material1807.png
+
+newmtl Material2273
+Ns 96.078431
+Ka 0.784314 0.784314 0.784314
+Kd 0.972549 0.972549 0.972549
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Material2273.png
+map_Ka Material2273.png
+map_d Material2273.png
