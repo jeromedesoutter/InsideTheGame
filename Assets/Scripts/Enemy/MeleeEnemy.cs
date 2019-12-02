@@ -42,7 +42,7 @@ public class MeleeEnemy : IEnemy
             delayBeforeAttack -= Time.deltaTime;
         }
 
-        if (isAttacking && delayBeforeAttack <= 0)
+        if (isAttacking && delayBeforeAttack <= 0 && !IsDead())
         {
             if (p != null)
             {

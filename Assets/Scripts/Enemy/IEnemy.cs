@@ -48,6 +48,8 @@ public abstract class IEnemy : MonoBehaviour
     bool HitFeedback = false;
     float TimeSinceBeginFeedback = 0;
 
+    public GameObject particles;
+
     protected virtual void Start()
     {
         room = GetComponentInParent<RoomManager>();
@@ -61,6 +63,7 @@ public abstract class IEnemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         navmesh.speed = 0.01f;
         renderers = gameObject.GetComponentsInChildren<Renderer>();
+
     }
     protected virtual void Update() {
         if (IsDead())
@@ -90,10 +93,29 @@ public abstract class IEnemy : MonoBehaviour
     }
     protected async void Die()
     {
+        soundsManager.PlaySound("die");
         AlreadyDead = true;
         if (collider != null)
             collider.enabled = false;
+        foreach(Renderer r in GetComponentsInChildren<Renderer>())
+        {
+            r.enabled = false;
+        }
+        if (GetComponent<Renderer>()!= null)
+        {
+            GetComponent<Renderer>().enabled = false;
+        }
+        GameObject part = null;
+        if (particles != null)
+        {
+            part = Instantiate(particles, transform.position, transform.rotation);
+        }
+        room.KillEnemy();
         await Task.Delay(TimeSpan.FromSeconds(delayBeforeDisappearingWhenDead));
+        if (part != null)
+        {
+            Destroy(part);
+        }
         Destroy(gameObject);
     }
 
@@ -104,16 +126,10 @@ public abstract class IEnemy : MonoBehaviour
             HitFeedback = true;
             TimeSinceBeginFeedback = 0;
 
+            soundsManager.PlaySound("hurt");
+
             Ball s = collision.gameObject.GetComponent<Ball>();
             life.current -= s.damage;
-            if (life.current <= 0)
-            {
-                if (room != null)
-                {
-                    room.KillEnemy();
-                }
-                Destroy(gameObject);
-            }
         }
     }
 

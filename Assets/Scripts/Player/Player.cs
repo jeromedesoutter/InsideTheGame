@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public GameController gController;
     private Vector3 spawnPoint;
 
+    public AudioManager soundsManager;
+
     private void Start()
     {
         spawnPoint = new Vector3(0, 6, 0);
@@ -17,6 +19,9 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        soundsManager.PlaySound("hurt");
+        gController.setHitFeedback();
+
         if (shield.current == 0)
         {
             life.current -= damage;
@@ -48,18 +53,6 @@ public class Player : MonoBehaviour
         {
             Projectil s = collision.gameObject.GetComponent<Projectil>();
             TakeDamage(s.damage);
-        }
-        else if(collision.gameObject.tag == "WitherSkull")
-        {
-            Debug.Log(collision.gameObject.name);
-            WitherSkull skull = collision.gameObject.GetComponent<WitherSkull>();
-            if (skull != null)
-            {
-                TakeDamage(skull.hitDamage);
-            }
-        }
-        else if(collision.gameObject.GetComponent<BowserBodyPart>() != null){
-            TakeDamage(collision.gameObject.GetComponent<BowserBodyPart>().GetDamage());
         }
     }
 

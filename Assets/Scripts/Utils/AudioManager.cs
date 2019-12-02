@@ -21,12 +21,8 @@ public class AudioManager
             if (s.name.Equals(key))
             {
                 s.source.Play();
-                break;
             }
-            else
-            {
-                s.source.Stop();
-            }
+
         }
     }
     

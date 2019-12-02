@@ -1,0 +1,19 @@
+newmtl Metal
+Kd 0.806122 0.806122 0.806122
+illum 1
+map_Kd metal.png
+
+newmtl Door
+Kd 0.729412 0.380392 0.066667
+illum 1
+map_Kd door.png
+
+newmtl Hole
+Kd 0.800000 0.800000 0.800000
+illum 1
+map_Kd hole.png
+
+newmtl Hinge
+Kd 0.121569 0.121569 0.121569
+illum 1
+map_Kd hinge.png
