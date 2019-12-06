@@ -169,18 +169,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 46648f0a134ade745b3ff1712c7fa128, type: 3}
-    m_FontSize: 14
+    m_FontSize: 3
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Nombre de niveaux r\xE9ussis"
+  m_Text: "\rNumber of level completed"
 --- !u!222 &35318229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nouvelle Partie
+  m_Text: New Game
 --- !u!222 &126618987
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -502,7 +502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &330265721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,18 +640,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 46648f0a134ade745b3ff1712c7fa128, type: 3}
-    m_FontSize: 14
+    m_FontSize: 3
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Nombre d'objets ramass\xE9s"
+  m_Text: "\rNumber of objects picked-up"
 --- !u!222 &374133985
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1084,7 +1084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Statistiques
+  m_Text: Statistics
 --- !u!222 &751892842
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1237,7 +1237,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Retour
+  m_Text: Back
 --- !u!222 &777014527
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1491,7 +1491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &909202509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,7 +1717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Statistiques
+  m_Text: Statistics
 --- !u!222 &1025791933
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1871,7 +1871,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Statistiques
+  m_Text: Statistics
 --- !u!222 &1072541032
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2259,18 +2259,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 46648f0a134ade745b3ff1712c7fa128, type: 3}
-    m_FontSize: 14
+    m_FontSize: 3
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Nombre de salles \xE9chou\xE9es"
+  m_Text: Number  of  rooms  failed
 --- !u!222 &1495930323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2336,18 +2336,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 46648f0a134ade745b3ff1712c7fa128, type: 3}
-    m_FontSize: 14
+    m_FontSize: 3
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Nombre de salles r\xE9ussies"
+  m_Text: Number of rooms completed
 --- !u!222 &1508830300
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2846,7 +2846,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reprendre la partie
+  m_Text: Continue
 --- !u!222 &1942151486
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3290,7 +3290,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quitter
+  m_Text: Exit Game
 --- !u!222 &2132442019
 CanvasRenderer:
   m_ObjectHideFlags: 0

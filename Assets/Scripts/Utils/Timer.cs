@@ -67,7 +67,7 @@ public class Timer : MonoBehaviour
     {
         TimeStruct remainingTime = new TimeStruct();
         remainingTime.SetTime(Mathf.Max(0, time.GetSeconds() - (int)currentTime));
-        timerText.text = "Temps restant     " + remainingTime.minutes.ToString("00") + ":" + remainingTime.seconds.ToString("00");
+        timerText.text = "Time Left:     " + remainingTime.minutes.ToString("00") + ":" + remainingTime.seconds.ToString("00");
     }
 
     public void StopTimer()

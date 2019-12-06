@@ -66,10 +66,13 @@ public class Interface : MonoBehaviour
             if (i < numberOfKeysWon)
             {
                 keys[i].GetComponent<Image>().sprite = silverKey;
+                keys[i].GetComponent<Image>().color = new Color(1, 1, 1,1);
+
             }
             else
             {
                 keys[i].GetComponent<Image>().sprite = goldKey;
+                keys[i].GetComponent<Image>().color = new Color(1,1,1,0.3f);
             }
         }
     }

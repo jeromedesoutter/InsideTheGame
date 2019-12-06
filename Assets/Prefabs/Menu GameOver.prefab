@@ -201,7 +201,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quitter
+  m_Text: Quit
 --- !u!1 &2613459605775550223
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +350,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Recommencer
+  m_Text: Restart
 --- !u!1 &2613459606350228516
 GameObject:
   m_ObjectHideFlags: 0
