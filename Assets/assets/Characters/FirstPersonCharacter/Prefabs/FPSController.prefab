@@ -316,6 +316,7 @@ MonoBehaviour:
     sounds:
     - name: hurt
       source: {fileID: 6988276223909646278}
+  shotPos: {fileID: 0}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +429,7 @@ MonoBehaviour:
   projectilPrefab: {fileID: 4583390542313772180, guid: 971d81e955cbad94eb34597c5259f8fc,
     type: 3}
   shotPos: {fileID: 321328077}
-  ballInHand: {fileID: 4583390543987421551}
+  ballInHand: {fileID: 0}
 --- !u!82 &6988276223909646278
 AudioSource:
   m_ObjectHideFlags: 0
@@ -552,11 +553,11 @@ Transform:
   m_LocalPosition: {x: 0.429, y: -0.272, z: 0.589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6440684483514585077}
+  - {fileID: 3591786029081333270}
   m_Father: {fileID: 400002}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1816028667
+--- !u!1001 &7546201415507846168
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -623,20 +624,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 54649646220787188, guid: 971d81e955cbad94eb34597c5259f8fc, type: 3}
-    - {fileID: 2918402525411178673, guid: 971d81e955cbad94eb34597c5259f8fc, type: 3}
-    - {fileID: 6496945171867209542, guid: 971d81e955cbad94eb34597c5259f8fc, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 971d81e955cbad94eb34597c5259f8fc, type: 3}
---- !u!1 &4583390543987421551 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4583390542313772180, guid: 971d81e955cbad94eb34597c5259f8fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1816028667}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6440684483514585077 stripped
+--- !u!4 &3591786029081333270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6440684482780441102, guid: 971d81e955cbad94eb34597c5259f8fc,
     type: 3}
-  m_PrefabInstance: {fileID: 1816028667}
+  m_PrefabInstance: {fileID: 7546201415507846168}
   m_PrefabAsset: {fileID: 0}
