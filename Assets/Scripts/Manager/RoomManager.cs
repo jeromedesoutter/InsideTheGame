@@ -88,6 +88,11 @@ public class RoomManager : MonoBehaviour
                 gcontroller.ActiveTimer(true);
                 gcontroller.setInterfaceObjective(Objectif);
             }
+            else
+            {
+                gcontroller.ActiveTimer(false);
+                gcontroller.setInterfaceObjective("Get the key");
+            }
         }
         
         

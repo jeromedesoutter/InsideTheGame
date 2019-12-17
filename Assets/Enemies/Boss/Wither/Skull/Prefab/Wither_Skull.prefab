@@ -97,7 +97,7 @@ MonoBehaviour:
   particles:
   - {fileID: 5317983959803685865, guid: 74722ad41317d5742827bab3eb7c9545, type: 3}
   - {fileID: 2023980722041860533, guid: 2a9ac96bf4ca10b4ca210eb99069fac1, type: 3}
-  speed: 0.5
+  speed: 0.3
   hitDamage: 5
   explodeDamage: 10
 --- !u!65 &8033744003623554163
